@@ -59,9 +59,11 @@ void LaunchDetachedProcess(const std::wstring& programPath, std::wstring& arg)
     // Use DETACHED_PROCESS flag to detach from the console
     DWORD creationFlags = DETACHED_PROCESS;
 
+    std::wstring arg_ = std::wstring(arg.begin(), arg.end());
+
     if (!CreateProcess(
         programPath.c_str(),  // Path to the program
-        arg.data(),             // Command-line arguments
+        arg_.data(),             // Command-line arguments
         NULL,                 // Process handle not inheritable
         NULL,                 // Thread handle not inheritable
         FALSE,                // Handle inheritance flag
@@ -112,7 +114,10 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     std::wstring chromeExe(L"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");
     std::wstring firefoxExe(L"C:\\Program Files\\Mozilla Firefox\\firefox.exe");
     std::wstring arg = L"--new-tab " + url;
-    LaunchDetachedProcess(firefoxExe, arg);
+    if (foundFirefox)
+        LaunchDetachedProcess(firefoxExe, arg);
+    else
+        LaunchDetachedProcess(chromeExe, arg);
 
     //int msgboxID = MessageBox(
     //    NULL,

@@ -1,0 +1,47 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\BrowserLauncher]
+@="BrowserLauncher"
+
+[HKEY_CLASSES_ROOT\BrowserLanucher\Application]
+"AppUserModelId"="BrowserLauncher.1.0"
+"ApplicationName"="BrowserLauncher"
+"ApplicationDescription"="Open any browser with custom contexts"
+
+[HKEY_CLASSES_ROOT\BrowserLauncher\shell\open\command]
+@="\"C:\\BrowserLauncher\\BrowserLauncher\\x64\\Debug\\BrowserLauncher.exe\" \"%1\""
+
+[HKEY_CLASSES_ROOT\BrowserLauncher\DefaultIcon]
+@="C:\\Program Files\\BrowserPicker\\BrowserPicker.exe,0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\RegisteredApplications]
+"BrowserLauncher"="Software\\Clients\\StartMenuInternet\\BrowserLanucher\\Capabilities"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\StartMenuInternet\BrowserLauncher]
+@="BrowserLauncher"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\StartMenuInternet\BrowserLauncher\Capabilities]
+"ApplicationDescription"="Open any browser with custom contexts"
+"ApplicationName"="BrowserLauncher"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\StartMenuInternet\BrowserLauncher\Capabilities\FileAssociations]
+".html"="BrowserLauncher"
+".htm"="BrowserLauncher"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\StartMenuInternet\BrowserLauncher\Capabilities\URLAssociations]
+"http"="BrowserLauncher"
+"https"="BrowserLauncher"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\StartMenuInternet\BrowserLauncher\DefaultIcon]
+@="C:\\Program Files\\BrowserPicker\\BrowserPicker.exe,0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Clients\StartMenuInternet\BrowserLauncher\InstallInfo]
+"HideIconsCommand"=""
+"IconsVisible"=dword:00000001
+"ReinstallCommand"=""
+"ShowIconsCommand"=""
+
+
+# ÇÃÇ¡Ç∆ÇËãNìÆópÉÅÉÇ
+# [HKEY_CLASSES_ROOT\BrowserPicker\shell\open\command]
+# @="\"C:\\BrowserLauncher\\BrowserLauncher\\x64\\Debug\\BrowserLauncher.exe\" \"%1\""
